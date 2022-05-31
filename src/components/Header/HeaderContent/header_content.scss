@@ -1,0 +1,29 @@
+.header_content_container{
+    display: flex;
+    align-items: center; 
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+    margin-top: 10%;
+    .btn_container{
+        display: flex; 
+        align-items: center;
+        justify-content: space-around;    
+        width: 50%;
+        margin: 0 auto;
+        .btn_sign_up, .btn_view_demo{
+            padding: 10px 20px;
+            &:hover{
+                filter: brightness(1.1);
+            }
+        }
+        .btn_sign_up{
+            background-color: #01a781;
+        }
+        .btn_view_demo{
+            color: #fff;
+            border-color: #01a781;
+        }
+    }
+}

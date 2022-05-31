@@ -1,0 +1,103 @@
+@keyframes pulses {
+  0% {
+    transform: translateZ(0);
+  }
+  100% {
+    transform: translate3d(-33%,0,0);
+  }
+}
+
+.header_container {
+  display: flex;
+  height: 10rem;
+  .info_slider {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 35px;
+    left: 0;
+    .bitfinex_pulse_container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      white-space: nowrap;
+      height: inherit;
+      flex: 0;
+      background: #172d3e;
+      .bitfinex_pulse_img {
+        margin-right: 10px;
+      }
+      .bitfinex_pulse_text {
+        color: #fff;
+      }
+    }
+
+    .info_items {
+      display: flex;
+      align-items: center;
+      height: 35px;
+      flex: 1 1;
+      font-size: 14px;
+      overflow: hidden;
+      position: relative;
+      background: #172d3e;
+        &::before {
+            content: "";
+            position: absolute;
+            height: 100%;
+            left: 0;
+            top: 0;
+            width: 27px;
+            z-index: 1;
+            background: linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0.514) 11%,
+            transparent
+            );
+        }
+        &::after{
+            content: "";
+            position: absolute;
+            height: 100%;
+            right: 0;
+            top: 0;
+            width: 27px;
+            z-index: 1;
+            background: linear-gradient(
+            to left,
+            rgba(0, 0, 0, 0.514) 11%,
+            transparent
+            );
+        }
+        .info_items_animation{
+            display: flex;
+            position: absolute;
+            left: 0;
+            max-width: 100%;
+            width: 100%;
+            animation: pulses 13s linear infinite;
+    
+            .info_container {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              white-space: nowrap;
+              .info_name {
+                font-size: 14px;
+                color: #82baf6;
+                margin-right: 5px;
+              }
+              .info_text {
+                font-size: 14px;
+                color: #fff;
+              }
+              .line{
+                  color: #fff;
+                  margin: 0 20px;
+              }
+            }
+        }      
+    }
+  }
+}

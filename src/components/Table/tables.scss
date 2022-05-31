@@ -1,0 +1,32 @@
+.cripto_table_container{
+    margin-top: 2%;
+    .tabs_container{
+        display: flex;
+        color: #fff;
+        .tab_name{
+            font-size: 16px;
+            margin: 10px;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+        .activeTab{
+            border-bottom: 4px solid #fff;
+            font-weight: 800;
+        }
+    }
+    .table_container{
+        background-color: #102331;
+        .table_row{
+            cursor: pointer;
+        }
+        .table_cell{
+            color: #fff;
+        }
+        .table_cell_green{
+            color: green !important;
+        }
+        .table_cell_red{
+            color: red !important;
+        }
+    }
+}
